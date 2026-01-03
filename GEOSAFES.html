@@ -1,0 +1,3196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GEOSAFES INDONESIA OPTIMA - Penyedia brankas dan solusi keamanan terpercaya di Indonesia">
+    <meta name="keywords" content="brankas, lemari besi, safe box, security solutions, Indonesia">
+    <meta name="author" content="GEOSAFES INDONESIA OPTIMA">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="GEOSAFES INDONESIA OPTIMA - Trusted Safe &amp; Security Solutions">
+    <meta property="og:description" content="Penyedia brankas dan solusi keamanan terpercaya di Indonesia">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.geosafes-indonesia.com">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "GEOSAFES INDONESIA OPTIMA",
+      "url": "https://www.geosafes-indonesia.com",
+      "logo": "https://z-cdn-media.chatglm.cn/files/c8c66ba9-57c9-40e5-acdc-be83406dd594_CIVILS%20HELMET%20%284%29.png?auth_key=1789714824-c2c3d6778fbc4d46962a5635acd20590-0-e0d5ceae516476ebcfc0d9bda83f3f3e",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+62-818-824-801",
+        "contactType": "customer service",
+        "email": "ab.prasetyo@adara.co.id"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. H. Malim No. 120",
+        "addressLocality": "Jatiasih",
+        "addressRegion": "Kota Bekasi",
+        "addressCountry": "ID"
+      },
+      "openingHours": "Mo-Sa 07:00-15:00",
+      "sameAs": [
+        "https://www.facebook.com/geosafesindonesia",
+        "https://www.instagram.com/geosafesindonesia"
+      ]
+    }
+    </script>
+    
+    <title>GEOSAFES INDONESIA OPTIMA - Trusted Safe &amp; Security Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #062b6b;
+            --primary-light: #0d47a1;
+            --accent: #f4a300;
+            --light: #ffffff;
+            --dark: #0a0a0a;
+            --gray: #333333;
+            --gray-light: #666666;
+            --gray-lighter: #f5f5f5;
+            --shadow: 0 4px 12px rgba(0,0,0,0.1);
+            --shadow-hover: 0 10px 20px rgba(0,0,0,0.15);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--gray);
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Loading Screen */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--light);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+        
+        .loading-screen.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .loader {
+            width: 60px;
+            height: 60px;
+            border: 5px solid var(--gray-lighter);
+            border-top: 5px solid var(--accent);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Scroll to Top Button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--accent);
+            color: var(--light);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 99;
+            box-shadow: var(--shadow);
+        }
+        
+        .scroll-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .scroll-top:hover {
+            background-color: #e09400;
+            transform: translateY(-5px);
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: var(--transition);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            margin-right: 12px;
+            object-fit: contain;
+            background-color: var(--light);
+            border-radius: 8px;
+            padding: 6px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+        }
+        
+        .logo-main {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .logo-sub {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--primary-light);
+            letter-spacing: 0.5px;
+        }
+        
+        nav {
+            display: flex;
+            align-items: center;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-light);
+        }
+        
+        nav ul li a.active {
+            color: var(--primary);
+        }
+        
+        nav ul li a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+            width: 44px;
+            height: 44px;
+            position: relative;
+            z-index: 101;
+        }
+        
+        .hamburger span {
+            display: block;
+            position: absolute;
+            height: 2px;
+            width: 22px;
+            background-color: var(--primary);
+            border-radius: 1px;
+            opacity: 1;
+            left: 11px;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+        }
+        
+        .hamburger span:nth-child(1) {
+            top: 14px;
+        }
+        
+        .hamburger span:nth-child(2) {
+            top: 21px;
+        }
+        
+        .hamburger span:nth-child(3) {
+            top: 28px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(6, 43, 107, 0.85), rgba(13, 71, 161, 0.85)), url('https://z-cdn-media.chatglm.cn/files/634329e3-cbda-45b8-93c6-74863ef742d9_CIVILS%20HELMET%20%286%29.png?auth_key=1789713827-39cb1a824337464db3c4d941e2b19116-0-ee084f7ebcd2a0879aa9ef59f3239bb1') center/cover no-repeat;
+            color: var(--light);
+            padding: 100px 0;
+            text-align: center;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(244, 163, 0, 0.1) 0%, transparent 50%);
+        }
+        
+        .hero-content {
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            animation: fadeInUp 0.8s ease;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+            animation: fadeInUp 0.8s ease 0.2s;
+            animation-fill-mode: both;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.4s;
+            animation-fill-mode: both;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 14px 35px;
+            background-color: var(--accent);
+            color: var(--light);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            white-space: nowrap;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background-color: #e09400;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--light);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--light);
+            color: var(--primary);
+        }
+        
+        .btn-secondary {
+            background-color: var(--primary);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--primary-light);
+        }
+        
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            position: relative;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent);
+        }
+        
+        .section-title p {
+            max-width: 800px;
+            margin: 0 auto;
+            color: var(--gray-light);
+            text-align: center;
+            font-size: 1.1rem;
+        }
+        
+        .about-content {
+            display: flex;
+            gap: 40px;
+            align-items: stretch;
+            flex-wrap: wrap;
+        }
+        
+        .about-left {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-right {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-left h3 {
+            font-size: 2rem;
+            margin-bottom: 25px;
+            color: var(--dark);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .about-left h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+        .advantage-list {
+            list-style: none;
+            margin-top: 30px;
+        }
+        
+        .advantage-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(6, 43, 107, 0.05);
+            transition: var(--transition);
+        }
+        
+        .advantage-item:hover {
+            transform: translateY(-5px);
+            background-color: rgba(6, 43, 107, 0.08);
+            box-shadow: var(--shadow);
+        }
+        
+        .advantage-icon {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-right: 15px;
+            min-width: 30px;
+            text-align: center;
+        }
+        
+        .advantage-text h4 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+            font-weight: 600;
+        }
+        
+        .advantage-text p {
+            color: var(--gray);
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        
+        /* Vision & Mission Box */
+        .vision-mission-box {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: var(--light);
+            border-radius: 10px;
+            padding: 40px;
+            height: 100%;
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .vision-mission-box h3 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .vision-mission-box h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+        .vision {
+            margin-bottom: 40px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .vision h4 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--light);
+            font-weight: 600;
+        }
+        
+        .vision p {
+            font-size: 1rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+        
+        .mission {
+            flex-grow: 1;
+        }
+        
+        .mission h4 {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            color: var(--light);
+            font-weight: 600;
+        }
+        
+        .mission-list {
+            list-style: none;
+        }
+        
+        .mission-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            padding-left: 5px;
+        }
+        
+        .mission-icon {
+            color: var(--accent);
+            margin-right: 12px;
+            font-size: 1.2rem;
+            min-width: 20px;
+            margin-top: 3px;
+        }
+        
+        .mission-text {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+        
+        .service-card {
+            background-color: var(--light);
+            padding: 35px 25px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(6, 43, 107, 0.1);
+            text-align: center;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--accent);
+        }
+        
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background-color: rgba(6, 43, 107, 0.05);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 20px;
+            transition: var(--transition);
+        }
+        
+        .service-card:hover .service-icon {
+            background-color: var(--accent);
+            color: var(--light);
+        }
+        
+        .service-icon i {
+            font-size: 2.2rem;
+            color: var(--accent);
+            transition: var(--transition);
+        }
+        
+        .service-card:hover .service-icon i {
+            color: var(--light);
+        }
+        
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        .service-card p {
+            color: var(--gray-light);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+        
+        /* Products Section */
+        .products {
+            padding: 80px 0;
+            background-color: var(--gray-lighter);
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .product-card {
+            background-color: var(--light);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(6, 43, 107, 0.1);
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--accent);
+        }
+        
+        .product-img {
+            height: 250px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: var(--light);
+            position: relative;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        
+        .product-img::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, transparent 70%);
+        }
+        
+        /* Icon untuk semua produk tanpa animasi */
+        .product-card:nth-child(1) .product-img i {
+            color: var(--light);
+        }
+        
+        .product-card:nth-child(2) .product-img i {
+            color: var(--light);
+        }
+        
+        .product-card:nth-child(3) .product-img i:first-child {
+            color: var(--light);
+        }
+        
+        .product-card:nth-child(3) .product-img i:last-child {
+            color: var(--accent);
+        }
+        
+        .product-info {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        
+        .product-info h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .product-info h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+        .product-features {
+            margin-bottom: 30px;
+        }
+        
+        .product-features ul {
+            list-style: none;
+            padding-left: 5px;
+        }
+        
+        .product-features li {
+            font-size: 1rem;
+            color: var(--gray);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .product-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .product-features li i {
+            color: var(--accent);
+            margin-right: 12px;
+            font-size: 1rem;
+            margin-top: 5px;
+            min-width: 20px;
+        }
+        
+        .product-info .btn {
+            border-radius: 8px;
+            width: 100%;
+            margin-top: auto;
+            padding: 16px;
+            font-size: 1.1rem;
+        }
+        
+        /* Product Modal */
+        .product-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            padding: 20px;
+        }
+        
+        .product-modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .product-modal {
+            background-color: var(--light);
+            border-radius: 15px;
+            width: 100%;
+            max-width: 1000px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+            max-height: 90vh;
+        }
+        
+        .product-modal-overlay.active .product-modal {
+            transform: scale(1);
+        }
+        
+        .modal-header {
+            background-color: var(--primary);
+            color: var(--light);
+            padding: 20px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .modal-header h2 {
+            font-size: 1.6rem;
+            margin: 0;
+            font-weight: 600;
+        }
+        
+        .modal-close {
+            background-color: transparent;
+            color: var(--light);
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: background-color 0.2s, color 0.2s;
+        }
+        
+        .modal-close:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .modal-content {
+            padding: 25px;
+            overflow-y: auto;
+            flex: 1;
+        }
+        
+        /* Tab Navigation */
+        .tab-nav {
+            display: flex;
+            border-bottom: 2px solid var(--gray-lighter);
+            margin-bottom: 25px;
+        }
+        
+        .tab-btn {
+            background: none;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--gray);
+            cursor: pointer;
+            position: relative;
+            transition: color 0.3s;
+        }
+        
+        .tab-btn.active {
+            color: var(--primary);
+        }
+        
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .product-details {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 30px;
+        }
+        
+        .product-image {
+            background-color: var(--gray-lighter);
+            border-radius: 10px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: var(--primary);
+        }
+        
+        .product-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .product-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+        .product-description {
+            margin-bottom: 25px;
+        }
+        
+        .product-description p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            line-height: 1.7;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .product-features {
+            margin-bottom: 25px;
+        }
+        
+        .product-features h4 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 15px;
+        }
+        
+        .product-features h4::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 20px;
+            background-color: var(--accent);
+            border-radius: 3px;
+        }
+        
+        .product-features ul {
+            list-style: none;
+            padding-left: 5px;
+        }
+        
+        .product-features li {
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            padding: 8px 0;
+        }
+        
+        .product-features li i {
+            color: var(--accent);
+            margin-right: 15px;
+            font-size: 1.1rem;
+            margin-top: 5px;
+            min-width: 20px;
+        }
+        
+        .modal-footer {
+            padding: 20px 25px;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        .modal-footer .btn {
+            min-width: 150px;
+            padding: 14px 30px;
+            font-size: 1.1rem;
+        }
+        
+        /* Image Slider Styles for Series */
+        .image-slider {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        
+        .slider-container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease;
+        }
+        
+        .slide {
+            min-width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        .slider-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 15px;
+        }
+        
+        .slider-btn {
+            background-color: rgba(255, 255, 255, 0.7);
+            color: var(--primary);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+        
+        .slider-btn:hover {
+            background-color: var(--accent);
+            color: var(--light);
+        }
+        
+        .slider-indicators {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+        
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .indicator.active {
+            background-color: var(--accent);
+            transform: scale(1.2);
+        }
+        
+        .download-link {
+            text-align: center;
+            margin-top: 15px;
+        }
+        
+        .download-link a {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 12px 25px;
+            border-radius: 8px;
+            background-color: rgba(6, 43, 107, 0.05);
+            transition: var(--transition);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .download-link a:hover {
+            background-color: var(--accent);
+            color: var(--light);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .download-link a i {
+            margin-right: 10px;
+            font-size: 1.1rem;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+        
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+        }
+        
+        .info-card {
+            background-color: var(--light);
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            padding: 30px 20px;
+            text-align: center;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid rgba(6, 43, 107, 0.1);
+            position: relative;
+            overflow: hidden;
+            flex: 1;
+            min-width: 250px;
+            max-width: 280px;
+        }
+        
+        .info-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+        }
+        
+        .info-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--accent);
+        }
+        
+        .info-icon-wrapper {
+            width: 80px;
+            height: 80px;
+            background-color: rgba(6, 43, 107, 0.05);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            transition: var(--transition);
+        }
+        
+        .info-card:hover .info-icon-wrapper {
+            background-color: var(--accent);
+            color: var(--light);
+        }
+        
+        .info-card i {
+            font-size: 2.5rem;
+            color: var(--accent);
+            transition: var(--transition);
+        }
+        
+        .info-card:hover .info-icon-wrapper i {
+            color: var(--light);
+        }
+        
+        .info-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+            font-weight: 600;
+            position: relative;
+        }
+        
+        .info-card p {
+            color: var(--gray-light);
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+        
+        .info-card .contact-detail {
+            font-weight: 500;
+            color: var(--primary);
+            margin-bottom: 8px;
+            display: block;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: var(--light);
+            padding: 60px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .footer-logo-container:hover {
+            transform: scale(1.05);
+        }
+        
+        .footer-logo-icon {
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+            object-fit: contain;
+            background-color: var(--light);
+            border-radius: 8px;
+            padding: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+        }
+        
+        .footer-logo-main {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--light);
+        }
+        
+        .footer-logo-sub {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.8);
+            letter-spacing: 0.5px;
+        }
+        
+        .footer-about p {
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        
+        .footer-links h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            color: var(--light);
+        }
+        
+        .footer-links h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-links ul li a i {
+            margin-right: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links ul li a:hover {
+            color: var(--light);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+        }
+        
+        /* Mobile Menu Overlay */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 300px;
+            height: 100vh;
+            background-color: var(--light);
+            box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+            z-index: 1000;
+            transition: right 0.3s ease;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        
+        .mobile-menu.active {
+            right: 0;
+        }
+        
+        .mobile-menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .mobile-menu-header h3 {
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+        
+        .close-menu {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--gray);
+            cursor: pointer;
+        }
+        
+        .mobile-menu ul {
+            list-style: none;
+        }
+        
+        .mobile-menu ul li {
+            margin-bottom: 15px;
+        }
+        
+        .mobile-menu ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            font-size: 1.1rem;
+            display: block;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .mobile-menu ul li a:hover {
+            color: var(--primary-light);
+        }
+        
+        .mobile-menu ul li a.active {
+            color: var(--primary);
+        }
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 999;
+            display: none;
+        }
+        
+        .overlay.active {
+            display: block;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Custom Icon Styles */
+        .icon-customize {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .icon-customize i:first-child {
+            position: absolute;
+            font-size: 3rem;
+            color: var(--light);
+        }
+        
+        .icon-customize i:last-child {
+            position: absolute;
+            font-size: 2rem;
+            color: var(--light);
+            transform: translate(15px, -15px);
+        }
+        
+        .icon-china {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .icon-china i:first-child {
+            position: absolute;
+            font-size: 4rem;
+            color: var(--light);
+        }
+        
+        .icon-china i:last-child {
+            position: absolute;
+            font-size: 1.5rem;
+            color: var(--accent);
+            transform: translate(20px, 10px);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .product-details {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-info {
+                gap: 20px;
+            }
+            
+            .info-card {
+                min-width: 220px;
+                max-width: 260px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+            }
+            
+            .header-container {
+                height: 80px;
+                padding: 0 16px;
+            }
+            
+            .logo-icon {
+                width: 40px;
+                height: 40px;
+                padding: 5px;
+                border-radius: 6px;
+            }
+            
+            .logo-main {
+                font-size: 1.5rem;
+            }
+            
+            .logo-sub {
+                font-size: 0.75rem;
+            }
+            
+            .hero {
+                padding: 80px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 320px;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            /* Contact Cards Horizontal Layout for Mobile - Perbaikan */
+            .contact-info {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                overflow-y: hidden;
+                gap: 20px;
+                padding: 0 20px 20px;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: thin;
+                scrollbar-color: var(--accent) var(--gray-lighter);
+                width: 100%;
+                justify-content: flex-start;
+                margin: 0 auto;
+            }
+            
+            .contact-info::-webkit-scrollbar {
+                height: 6px;
+            }
+            
+            .contact-info::-webkit-scrollbar-track {
+                background: var(--gray-lighter);
+                border-radius: 10px;
+            }
+            
+            .contact-info::-webkit-scrollbar-thumb {
+                background: var(--accent);
+                border-radius: 10px;
+            }
+            
+            .info-card {
+                flex: 0 0 auto;
+                min-width: 200px;
+                max-width: 220px;
+                padding: 25px 15px;
+                box-shadow: var(--shadow);
+            }
+            
+            .info-icon-wrapper {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .info-card i {
+                font-size: 2rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .footer-links h3::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .tab-nav {
+                flex-wrap: wrap;
+            }
+            
+            .tab-btn {
+                flex: 1;
+                min-width: 50%;
+                text-align: center;
+            }
+            
+            /* Adjust icon sizes for mobile */
+            .icon-customize i:first-child {
+                font-size: 2.5rem;
+            }
+            
+            .icon-customize i:last-child {
+                font-size: 1.5rem;
+                transform: translate(12px, -12px);
+            }
+            
+            .icon-china i:first-child {
+                font-size: 3.5rem;
+            }
+            
+            .icon-china i:last-child {
+                font-size: 1.2rem;
+                transform: translate(18px, 8px);
+            }
+        }
+        
+        /* Desktop Button Styling */
+        @media (min-width: 769px) {
+            .hero .btn {
+                padding: 16px 50px;
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .logo-main {
+                font-size: 1.3rem;
+            }
+            
+            .logo-sub {
+                font-size: 0.7rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .service-card, .product-card {
+                padding: 20px;
+            }
+            
+            /* Contact Cards Horizontal Layout for Small Mobile - Perbaikan */
+            .contact-info {
+                gap: 15px;
+                padding: 0 15px 15px;
+            }
+            
+            .info-card {
+                min-width: 160px;
+                max-width: 180px;
+                padding: 20px 10px;
+            }
+            
+            .info-icon-wrapper {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .info-card i {
+                font-size: 1.8rem;
+            }
+            
+            .info-card h3 {
+                font-size: 1rem;
+                margin-bottom: 8px;
+            }
+            
+            .info-card p {
+                font-size: 0.85rem;
+                line-height: 1.3;
+            }
+            
+            .product-img {
+                height: 200px;
+            }
+            
+            .about-left h3, .vision-mission-box h3 {
+                font-size: 1.5rem;
+            }
+            
+            .advantage-item {
+                padding: 15px;
+            }
+            
+            .advantage-icon {
+                font-size: 1.5rem;
+            }
+            
+            .advantage-text h4 {
+                font-size: 1.1rem;
+            }
+            
+            .vision-mission-box {
+                padding: 25px;
+            }
+            
+            .vision h4, .mission h4 {
+                font-size: 1.1rem;
+            }
+            
+            .mission-item {
+                margin-bottom: 10px;
+            }
+            
+            .modal-header {
+                padding: 15px 20px;
+            }
+            
+            .modal-header h2 {
+                font-size: 1.3rem;
+            }
+            
+            .modal-close {
+                width: 28px;
+                height: 28px;
+                font-size: 1rem;
+            }
+            
+            .modal-content {
+                padding: 20px;
+            }
+            
+            .product-title {
+                font-size: 1.8rem;
+            }
+            
+            .product-description p {
+                font-size: 1rem;
+            }
+            
+            .product-features h4 {
+                font-size: 1.1rem;
+            }
+            
+            .product-features li {
+                font-size: 1rem;
+            }
+            
+            .modal-footer {
+                padding: 15px 20px;
+            }
+            
+            .btn {
+                padding: 12px 20px;
+                font-size: 1rem;
+            }
+            
+            /* Further adjust icon sizes for small mobile */
+            .icon-customize i:first-child {
+                font-size: 2rem;
+            }
+            
+            .icon-customize i:last-child {
+                font-size: 1.2rem;
+                transform: translate(10px, -10px);
+            }
+            
+            .icon-china i:first-child {
+                font-size: 3rem;
+            }
+            
+            .icon-china i:last-child {
+                font-size: 1rem;
+                transform: translate(15px, 6px);
+            }
+            
+            .image-slider {
+                height: 250px;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader"></div>
+    </div>
+    
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="overlay" id="overlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <h3>Menu</h3>
+            <button class="close-menu" id="closeMenu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul>
+            <li><a href="#home" class="mobile-nav-link active">Beranda</a></li>
+            <li><a href="#about" class="mobile-nav-link">Tentang</a></li>
+            <li><a href="#services" class="mobile-nav-link">Layanan</a></li>
+            <li><a href="#products" class="mobile-nav-link">Produk</a></li>
+            <li><a href="#contact" class="mobile-nav-link">Kontak</a></li>
+        </ul>
+    </div>
+    
+    <!-- Product Modal for SERI GEOSAFES -->
+    <div class="product-modal-overlay" id="productModal">
+        <div class="product-modal">
+            <div class="modal-header">
+                <h2>SERI BRANKAS GEOSAFES</h2>
+                <button class="modal-close" id="modalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-content">
+                <div class="tab-nav">
+                    <button class="tab-btn active" data-tab="titanium">Titanium Series</button>
+                    <button class="tab-btn" data-tab="platinum">Platinum Series</button>
+                    <button class="tab-btn" data-tab="drawer">Drawer Trap Series</button>
+                    <button class="tab-btn" data-tab="file">File Safes Series</button>
+                </div>
+                
+                <div class="tab-content active" id="titanium">
+                    <div class="product-details">
+                        <div>
+                            <!-- Image Slider for Titanium Series -->
+                            <div class="image-slider" id="titaniumSlider">
+                                <div class="slider-container">
+                                    <div class="slide">
+                                        <img src="finale/TN-1.png" alt="Titanium Series 1">
+                                    </div>
+                                    <div class="slide">
+                                        <img src="finale/TN-2.png" alt="Titanium Series 2">
+                                    </div>
+                                </div>
+                                <div class="slider-nav">
+                                    <button class="slider-btn" id="titaniumPrev"><i class="fas fa-chevron-left"></i></button>
+                                    <button class="slider-btn" id="titaniumNext"><i class="fas fa-chevron-right"></i></button>
+                                </div>
+                                <div class="slider-indicators">
+                                    <span class="indicator active" data-slide="0"></span>
+                                    <span class="indicator" data-slide="1"></span>
+                                </div>
+                            </div>
+                            
+                            <!-- Download Link -->
+                            <div class="download-link">
+                                <a href="https://drive.google.com/file/d/1NtYFSQMV7wXvBRaUnsvbv59-fV1Te829/view?usp=drive_link" target="_blank">
+                                    <i class="fas fa-download"></i> Download Brosur
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="product-title">TITANIUM SERIES</h3>
+                            <div class="product-description">
+                                <p>Brankas Titanium GEOSAFES menawarkan perlindungan luar biasa terhadap kebakaran dan pembobolan. Dibuat dengan bahan baja berkualitas tinggi serta teknologi pengamanan yang andal, brankas ini dirancang untuk melindungi aset berharga Anda dari berbagai risiko.</p>
+                                <p>Selain ketangguhannya, Titanium Series memiliki desain sederhana namun profesional, cocok ditempatkan di rumah maupun kantor. Kapasitasnya fleksibel untuk menyimpan dokumen, uang tunai, dan barang berharga dengan aman.</p>
+                            </div>
+                            <div class="product-features">
+                                <h4>Fitur Utama:</h4>
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Tahan api dan tahan bongkar</li>
+                                    <li><i class="fas fa-check-circle"></i> Konstruksi baja kuat</li>
+                                    <li><i class="fas fa-check-circle"></i> Keamanan terpercaya untuk kebutuhan pribadi dan bisnis</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="platinum">
+                    <div class="product-details">
+                        <div>
+                            <!-- Image Slider for Platinum Series -->
+                            <div class="image-slider" id="platinumSlider">
+                                <div class="slider-container">
+                                    <div class="slide">
+                                        <img src="finale/PT-1.png" alt="Platinum Series 1">
+                                    </div>
+                                    <div class="slide">
+                                        <img src="finale/PT-2.png" alt="Platinum Series 2">
+                                    </div>
+                                </div>
+                                <div class="slider-nav">
+                                    <button class="slider-btn" id="platinumPrev"><i class="fas fa-chevron-left"></i></button>
+                                    <button class="slider-btn" id="platinumNext"><i class="fas fa-chevron-right"></i></button>
+                                </div>
+                                <div class="slider-indicators">
+                                    <span class="indicator active" data-slide="0"></span>
+                                    <span class="indicator" data-slide="1"></span>
+                                </div>
+                            </div>
+                            
+                            <!-- Download Link -->
+                            <div class="download-link">
+                                <a href="https://drive.google.com/file/d/188NBpD49Zzv-ZQLm_zKXSh2PufUhnzaO/view?usp=drive_link" target="_blank">
+                                    <i class="fas fa-download"></i> Download Brosur
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="product-title">PLATINUM SERIES</h3>
+                            <div class="product-description">
+                                <p>Brankas Platinum GEOSAFES dirancang untuk memberikan perlindungan maksimal terhadap pencurian dan kebakaran. Dengan konstruksi baja premium dan sistem penguncian canggih, Platinum Series ideal bagi bisnis maupun individu yang memerlukan tingkat keamanan tertinggi.</p>
+                                <p>Selain kekuatannya, brankas ini menampilkan desain elegan yang serasi dengan interior modern. Ruang penyimpanannya yang luas memungkinkan Anda menyimpan dokumen penting, perhiasan, dan barang berharga dengan tenang.</p>
+                            </div>
+                            <div class="product-features">
+                                <h4>Fitur Utama:</h4>
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Perlindungan maksimal terhadap pencurian dan kebakaran</li>
+                                    <li><i class="fas fa-check-circle"></i> Baja premium dan penguncian canggih</li>
+                                    <li><i class="fas fa-check-circle"></i> Desain elegan dengan kapasitas besar</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="drawer">
+                    <div class="product-details">
+                        <div>
+                            <!-- Image Slider for Drawer Trap Series -->
+                            <div class="image-slider" id="drawerSlider">
+                                <div class="slider-container">
+                                    <div class="slide">
+                                        <img src="finale/DW-1.png" alt="Drawer Trap Series Product Image">
+                                    </div>
+                                    <div class="slide">
+                                        <img src="finale/DW-2.png" alt="Drawer Trap Series Specifications">
+                                    </div>
+                                </div>
+                                <div class="slider-nav">
+                                    <button class="slider-btn" id="drawerPrev"><i class="fas fa-chevron-left"></i></button>
+                                    <button class="slider-btn" id="drawerNext"><i class="fas fa-chevron-right"></i></button>
+                                </div>
+                                <div class="slider-indicators">
+                                    <span class="indicator active" data-slide="0"></span>
+                                    <span class="indicator" data-slide="1"></span>
+                                </div>
+                            </div>
+                            
+                            <!-- Download Link -->
+                            <div class="download-link">
+                                <a href="https://drive.google.com/file/d/1drgSb4mKsqa7xm5WQ2H3J2Kg9B8F4Wro/view?usp=drive_link" target="_blank">
+                                    <i class="fas fa-download"></i> Download Brosur
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="product-title">DRAWER TRAP SERIES</h3>
+                            <div class="product-description">
+                                <p>Drawer Trap GEOSAFES adalah solusi brankas dengan mekanisme laci perangkap yang dirancang khusus untuk penyimpanan kas dan transaksi bisnis. Sistem ini memungkinkan uang dimasukkan tanpa membuka ruang utama, meminimalkan risiko saat operasional.</p>
+                                <p>Dengan konstruksi kokoh dan fitur keamanan praktis, Drawer Trap Series cocok digunakan di toko ritel, restoran, atau bisnis yang memerlukan penanganan kas cepat dan aman.</p>
+                            </div>
+                            <div class="product-features">
+                                <h4>Fitur Utama:</h4>
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Mekanisme laci perangkap anti-bobol</li>
+                                    <li><i class="fas fa-check-circle"></i> Akses cepat tanpa membuka ruang utama</li>
+                                    <li><i class="fas fa-check-circle"></i> Konstruksi kuat dan andal</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="file">
+                    <div class="product-details">
+                        <div>
+                            <!-- Image Slider for File Safes Series -->
+                            <div class="image-slider" id="fileSlider">
+                                <div class="slider-container">
+                                    <div class="slide">
+                                        <img src="finale/FS-1.png" alt="File Safes Series Product Image">
+                                    </div>
+                                    <div class="slide">
+                                        <img src="finale/FS-2.png" alt="File Safes Series Specifications">
+                                    </div>
+                                </div>
+                                <div class="slider-nav">
+                                    <button class="slider-btn" id="filePrev"><i class="fas fa-chevron-left"></i></button>
+                                    <button class="slider-btn" id="fileNext"><i class="fas fa-chevron-right"></i></button>
+                                </div>
+                                <div class="slider-indicators">
+                                    <span class="indicator active" data-slide="0"></span>
+                                    <span class="indicator" data-slide="1"></span>
+                                </div>
+                            </div>
+                            
+                            <!-- Download Link -->
+                            <div class="download-link">
+                                <a href="https://drive.google.com/file/d/1fEo4x0PsOU_RCOAwLxesMt7a7eWeq5qn/view?usp=drive_link" target="_blank">
+                                    <i class="fas fa-download"></i> Download Brosur
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="product-title">FILE SAFES SERIES</h3>
+                            <div class="product-description">
+                                <p>File Safes Series GEOSAFES adalah brankas arsip tahan api yang dirancang untuk melindungi dokumen penting dari kebakaran dan pencurian. Dengan bahan berkualitas tinggi, brankas ini memastikan keamanan arsip bisnis maupun pribadi.</p>
+                                <p>Desainnya yang fungsional dan profesional memudahkan penyimpanan dokumen dalam jumlah besar tanpa mengorbankan keamanan. File Safes Series cocok untuk kantor, lembaga, maupun penggunaan pribadi.</p>
+                            </div>
+                            <div class="product-features">
+                                <h4>Fitur Utama:</h4>
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Arsip tahan api dan anti-pencurian</li>
+                                    <li><i class="fas fa-check-circle"></i> Kapasitas besar untuk dokumen penting</li>
+                                    <li><i class="fas fa-check-circle"></i> Desain fungsional dan profesional</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="modalContactBtn">Hubungi Kami</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Product Modal for CUSTOMIZE -->
+    <div class="product-modal-overlay" id="customizeProductModal">
+        <div class="product-modal">
+            <div class="modal-header">
+                <h2>PRODUK CUSTOMIZE</h2>
+                <button class="modal-close" id="customizeModalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-content">
+                <div class="tab-nav">
+                    <button class="tab-btn active" data-tab="customize-file">FILE SAFES</button>
+                    <button class="tab-btn" data-tab="customize-floor">FLOOR SAFES</button>
+                </div>
+                
+                <div class="tab-content active" id="customize-file">
+                    <div class="product-details">
+                        <div>
+                            <!-- Image Slider for File Safes -->
+                            <div class="image-slider" id="customizeFileSlider">
+                                <div class="slider-container">
+                                    <div class="slide">
+                                        <img src="finale/Files 1.png" alt="File Safes Product Image">
+                                    </div>
+                                    <div class="slide">
+                                        <img src="finale/Files 2.png" alt="File Safes Specifications">
+                                    </div>
+                                </div>
+                                <div class="slider-nav">
+                                    <button class="slider-btn" id="customizeFilePrev"><i class="fas fa-chevron-left"></i></button>
+                                    <button class="slider-btn" id="customizeFileNext"><i class="fas fa-chevron-right"></i></button>
+                                </div>
+                                <div class="slider-indicators">
+                                    <span class="indicator active" data-slide="0"></span>
+                                    <span class="indicator" data-slide="1"></span>
+                                </div>
+                            </div>
+                            
+                            <!-- Download Link -->
+                            <div class="download-link">
+                                <a href="#" target="_blank">
+                                    <i class="fas fa-download"></i> Brosur Belum Tersedia
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="product-title">FILE SAFES</h3>
+                            <div class="product-description">
+                                <p>Brankas File Safes GEOSAFES dirancang khusus untuk menyimpan dan melindungi dokumen penting Anda dari risiko pencurian maupun kerusakan. Dengan konstruksi baja berkualitas tinggi dan lapisan perlindungan yang kokoh, brankas ini mampu menjaga keamanan arsip bisnis, dokumen legal, maupun data pribadi Anda. Sistem penguncian kombinasi pada tiap lacinya memberikan tingkat keamanan ganda untuk setiap bagian penyimpanan.</p>
+                                <p>Selain keamanannya, File Safes memiliki desain yang fungsional dan profesional, cocok ditempatkan di kantor maupun ruang arsip. Kapasitas penyimpanannya yang luas memudahkan pengorganisasian dokumen dalam jumlah besar, sehingga pekerjaan administrasi Anda menjadi lebih rapi dan efisien.</p>
+                            </div>
+                            <div class="product-features">
+                                <h4>Fitur Utama:</h4>
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Perlindungan tinggi terhadap pencurian dan kerusakan dokumen</li>
+                                    <li><i class="fas fa-check-circle"></i> Konstruksi baja berkualitas tinggi dengan sistem penguncian kombinasi</li>
+                                    <li><i class="fas fa-check-circle"></i> Kapasitas besar dengan beberapa laci untuk pengaturan arsip yang optimal</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="customize-floor">
+                    <div class="product-details">
+                        <div>
+                            <!-- Image Slider for Floor Safes -->
+                            <div class="image-slider" id="customizeFloorSlider">
+                                <div class="slider-container">
+                                    <div class="slide">
+                                        <img src="finale/Floor 1.png" alt="Floor Safes Product Image">
+                                    </div>
+                                    <div class="slide">
+                                        <img src="finale/Floor 2.png" alt="Floor Safes Specifications">
+                                    </div>
+                                </div>
+                                <div class="slider-nav">
+                                    <button class="slider-btn" id="customizeFloorPrev"><i class="fas fa-chevron-left"></i></button>
+                                    <button class="slider-btn" id="customizeFloorNext"><i class="fas fa-chevron-right"></i></button>
+                                </div>
+                                <div class="slider-indicators">
+                                    <span class="indicator active" data-slide="0"></span>
+                                    <span class="indicator" data-slide="1"></span>
+                                </div>
+                            </div>
+                            
+                            <!-- Download Link -->
+                            <div class="download-link">
+                                <a href="#" target="_blank">
+                                    <i class="fas fa-download"></i> Brosur Belum Tersedia
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="product-title">FLOOR SAFES</h3>
+                            <div class="product-description">
+                                <p>Brankas Floor Safes GEOSAFES dirancang untuk keamanan tersembunyi yang maksimal. Dengan pemasangan di lantai, brankas ini menawarkan perlindungan ekstra dari pencurian dan kebakaran, sekaligus memanfaatkan ruang secara efisien. Konstruksi bajanya yang tebal dan mekanisme penguncian kuat membuat barang-barang berharga Anda tetap aman dari ancaman eksternal.</p>
+                                <p>Floor Safes memiliki desain kompak yang dapat dipasang secara tersembunyi, menjadikannya pilihan ideal untuk rumah, apartemen, atau bisnis yang mengutamakan kerahasiaan dan keamanan tinggi. Dengan akses mudah namun aman, brankas ini memastikan barang penting seperti perhiasan, uang tunai, atau dokumen rahasia tetap terlindungi.</p>
+                            </div>
+                            <div class="product-features">
+                                <h4>Fitur Utama:</h4>
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Perlindungan tersembunyi terhadap pencurian dan kebakaran</li>
+                                    <li><i class="fas fa-check-circle"></i> Konstruksi baja tebal dan penguncian kuat</li>
+                                    <li><i class="fas fa-check-circle"></i> Desain kompak, hemat ruang, dan mudah disembunyikan</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="customizeModalContactBtn">Hubungi Kami</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Product Modal for IMPOR CHINA -->
+    <div class="product-modal-overlay" id="imporChinaProductModal">
+        <div class="product-modal">
+            <div class="modal-header">
+                <h2>PRODUK IMPOR CHINA</h2>
+                <button class="modal-close" id="imporChinaModalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-content">
+                <div class="tab-nav">
+                    <button class="tab-btn active" data-tab="delling">DELING SAFES</button>
+                    <button class="tab-btn" data-tab="jinhao">JINHAO SAFES</button>
+                </div>
+                
+                <div class="tab-content active" id="delling">
+                    <div class="product-details">
+                        <div>
+                            <!-- Image Slider for Deling Safes -->
+                            <div class="image-slider" id="dellingSlider">
+                                <div class="slider-container">
+                                    <div class="slide">
+                                        <img src="finale/Deling 1.jpg" alt="Delling Safes Product Image">
+                                    </div>
+                                    <div class="slide">
+                                        <img src="finale/Delling 2.png" alt="Delling Safes Specifications">
+                                    </div>
+                                </div>
+                                <div class="slider-nav">
+                                    <button class="slider-btn" id="dellingPrev"><i class="fas fa-chevron-left"></i></button>
+                                    <button class="slider-btn" id="dellingNext"><i class="fas fa-chevron-right"></i></button>
+                                </div>
+                                <div class="slider-indicators">
+                                    <span class="indicator active" data-slide="0"></span>
+                                    <span class="indicator" data-slide="1"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="product-title">DELING SAFES</h3>
+                            <div class="product-description">
+                                <p>Brankas Deling dirancang untuk memberikan perlindungan optimal bagi dokumen, uang tunai, maupun barang berharga Anda. Dengan kombinasi konstruksi baja berkualitas tinggi dan sistem penguncian digital yang andal, Delling Safes menghadirkan keamanan maksimal sekaligus kemudahan penggunaan. Brankas ini cocok digunakan di rumah, kantor, maupun toko yang memerlukan perlindungan ekstra terhadap risiko pencurian dan kebakaran.</p>
+                                <p>Selain ketahanannya, Deling Safes memiliki desain modern dan elegan, sehingga mudah menyatu dengan berbagai interior. Ukurannya yang bervariasi memberi fleksibilitas dalam pemilihan kapasitas sesuai kebutuhan penyimpanan Anda, baik untuk arsip penting, perhiasan, maupun aset berharga lainnya.</p>
+                            </div>
+                            <div class="product-features">
+                                <h4>Fitur Utama:</h4>
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Perlindungan tinggi terhadap pencurian dan kebakaran</li>
+                                    <li><i class="fas fa-check-circle"></i> Konstruksi baja kokoh dengan sistem penguncian digital andal</li>
+                                    <li><i class="fas fa-check-circle"></i> Desain modern dan pilihan ukuran beragam untuk berbagai kebutuhan</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="jinhao">
+                    <div class="product-details">
+                        <div>
+                            <!-- Image Slider for Jinhao Safes -->
+                            <div class="image-slider" id="jinhaoSlider">
+                                <div class="slider-container">
+                                    <div class="slide">
+                                        <img src="finale/Jinhao 1.png" alt="Jinhao Safes Product Image">
+                                    </div>
+                                    <div class="slide">
+                                        <img src="finale/Jinhao 2.png" alt="Jinhao Safes Specifications">
+                                    </div>
+                                </div>
+                                <div class="slider-nav">
+                                    <button class="slider-btn" id="jinhaoPrev"><i class="fas fa-chevron-left"></i></button>
+                                    <button class="slider-btn" id="jinhaoNext"><i class="fas fa-chevron-right"></i></button>
+                                </div>
+                                <div class="slider-indicators">
+                                    <span class="indicator active" data-slide="0"></span>
+                                    <span class="indicator" data-slide="1"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="product-title">JINHAO SAFES</h3>
+                            <div class="product-description">
+                                <p>Brankas Jinhao dirancang untuk menghadirkan keamanan canggih dan fungsionalitas praktis. Menggunakan sistem penguncian digital dan beberapa model dilengkapi teknologi sidik jari, Jinhao Safes memberikan perlindungan ganda untuk aset berharga Anda. Bahan baja tebal dan mekanisme pengunciannya yang kuat memastikan dokumen penting, perhiasan, maupun uang tunai terlindungi dari ancaman pencurian maupun kerusakan.</p>
+                                <p>Dengan pilihan ukuran dari kompak hingga besar, Jinhao Safes ideal ditempatkan di rumah, apartemen, atau ruang usaha. Desainnya yang modern dan profesional menjadikannya bukan hanya perangkat keamanan, tetapi juga elemen yang menunjang kerapian dan kepraktisan penyimpanan.</p>
+                            </div>
+                            <div class="product-features">
+                                <h4>Fitur Utama:</h4>
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Sistem penguncian digital, beberapa model dilengkapi sensor sidik jari</li>
+                                    <li><i class="fas fa-check-circle"></i> Konstruksi baja tebal untuk perlindungan maksimal</li>
+                                    <li><i class="fas fa-check-circle"></i> Pilihan ukuran fleksibel, cocok untuk rumah maupun bisnis</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="imporChinaModalContactBtn">Hubungi Kami</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo" id="logo">
+                <img src="finale/GEOSAFES logo.png" alt="GEOSAFES Logo" class="logo-icon">
+                <div class="logo-text">
+                    <div class="logo-main">GEOSAFES</div>
+                    <div class="logo-sub">INDONESIA OPTIMA</div>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">Beranda</a></li>
+                    <li><a href="#about">Tentang</a></li>
+                    <li><a href="#services">Layanan</a></li>
+                    <li><a href="#products">Produk</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h1>Solusi Brankas Modern, Aman &amp; Teruji</h1>
+            <p>Keamanan bukan sekadar pilihan, tapi investasi. Lindungi aset Anda bersama kami.</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn">Hubungi Kami</a>
+                <a href="#products" class="btn btn-outline">Lihat Produk</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="about fade-in">
+        <div class="container">
+            <div class="section-title">
+                <h2>Tentang Kami</h2>
+                <p>PT. GEOSAFES INDONESIA OPTIMA adalah pemasok brankas dan lemari besi tahan api terpercaya di Indonesia, menyediakan produk berkualitas tinggi untuk kebutuhan pribadi, bisnis, dan institusi, dengan layanan cepat dan profesional.</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-left">
+                    <h3>Mengapa Memilih GEOSAFES?</h3>
+                    <ul class="advantage-list">
+                        <li class="advantage-item fade-in">
+                            <i class="fas fa-award advantage-icon"></i>
+                            <div class="advantage-text">
+                                <h4>Kualitas Tinggi</h4>
+                                <p>Produk bersertifikat standar internasional dengan bahan premium dan teknologi terkini</p>
+                            </div>
+                        </li>
+                        <li class="advantage-item fade-in">
+                            <i class="fas fa-user-tie advantage-icon"></i>
+                            <div class="advantage-text">
+                                <h4>Layanan Profesional</h4>
+                                <p>Tim teknisi berpengalaman dengan sertifikasi industri keamanan</p>
+                            </div>
+                        </li>
+                        <li class="advantage-item fade-in">
+                            <i class="fas fa-lightbulb advantage-icon"></i>
+                            <div class="advantage-text">
+                                <h4>Inovasi Berkelanjutan</h4>
+                                <p>Solusi keamanan canggih dengan teknologi terkini dan penyesuaian kebutuhan klien</p>
+                            </div>
+                        </li>
+                        <li class="advantage-item fade-in">
+                            <i class="fas fa-smile advantage-icon"></i>
+                            <div class="advantage-text">
+                                <h4>Kepuasan Pelanggan</h4>
+                                <p>Komitmen pada layanan purna jual terbaik dan dukungan penuh untuk setiap pelanggan</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="about-right">
+                    <div class="vision-mission-box fade-in">
+                        <h3>Visi &amp; Misi Kami</h3>
+                        <div class="vision">
+                            <h4>Visi</h4>
+                            <p>Menjadi perusahaan solusi keamanan terdepan di Indonesia yang memberikan ketenangan dan kepercayaan kepada pelanggan</p>
+                        </div>
+                        <div class="mission">
+                            <h4>Misi</h4>
+                            <ul class="mission-list">
+                                <li class="mission-item">
+                                    <i class="fas fa-check-circle mission-icon"></i>
+                                    <span class="mission-text">Menyediakan produk teknologi keamanan berkualitas tinggi</span>
+                                </li>
+                                <li class="mission-item">
+                                    <i class="fas fa-check-circle mission-icon"></i>
+                                    <span class="mission-text">Memberikan layanan purna jual terbaik di industri</span>
+                                </li>
+                                <li class="mission-item">
+                                    <i class="fas fa-check-circle mission-icon"></i>
+                                    <span class="mission-text">Menyediakan solusi keamanan yang disesuaikan dengan kebutuhan klien</span>
+                                </li>
+                                <li class="mission-item">
+                                    <i class="fas fa-check-circle mission-icon"></i>
+                                    <span class="mission-text">Membangun hubungan kepercayaan jangka panjang dengan pelanggan</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section id="services" class="services fade-in">
+        <div class="container">
+            <div class="section-title">
+                <h2>Layanan Kami</h2>
+                <p>Solusi lengkap untuk semua kebutuhan keamanan Anda</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Pengiriman &amp; Instalasi</h3>
+                    <p>Layanan pengiriman dan instalasi brankas profesional ke seluruh Indonesia dengan tim ahli berpengalaman.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Perawatan &amp; Perbaikan</h3>
+                    <p>Layanan perawatan berkala dan perbaikan brankas untuk memastikan keamanan optimal dan umur panjang produk.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3>Kunci &amp; Digital Lock</h3>
+                    <p>Solusi penggantian kunci dan upgrade sistem penguncian digital untuk keamanan yang lebih modern.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Konsultasi Keamanan</h3>
+                    <p>Layanan konsultasi profesional untuk menentukan solusi brankas terbaik sesuai kebutuhan Anda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Products Section -->
+    <section id="products" class="products fade-in">
+        <div class="container">
+            <div class="section-title">
+                <h2>Produk Unggulan</h2>
+                <p>Koleksi brankas terbaik untuk melindungi aset berharga Anda</p>
+            </div>
+            <div class="product-grid">
+                <div class="product-card fade-in" id="productCard">
+                    <div class="product-img">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>SERI GEOSAFES</h3>
+                        <div class="product-features">
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> <strong>TITANIUM SERIES</strong></li>
+                                <li><i class="fas fa-check-circle"></i> <strong>PLATINUM SERIES</strong></li>
+                                <li><i class="fas fa-check-circle"></i> <strong>DRAWER TRAP SERIES</strong></li>
+                                <li><i class="fas fa-check-circle"></i> <strong>FILE SAFES SERIES</strong></li>
+                            </ul>
+                        </div>
+                        <a href="#" class="btn" id="viewDetailsBtn">Lihat Detail Produk</a>
+                    </div>
+                </div>
+                
+                <div class="product-card fade-in" id="customizeProductCard">
+                    <div class="product-img">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>CUSTOMIZE</h3>
+                        <div class="product-features">
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> <strong>TYPE FILE SAFES</strong></li>
+                                <li><i class="fas fa-check-circle"></i> <strong>TYPE FLOOR SAFES</strong></li>
+                            </ul>
+                        </div>
+                        <a href="#" class="btn" id="customizeViewDetailsBtn">Lihat Detail Produk</a>
+                    </div>
+                </div>
+                
+                <div class="product-card fade-in" id="imporChinaProductCard">
+                    <div class="product-img">
+                        <div class="icon-china">
+                            <i class="fas fa-globe"></i>
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>IMPOR CHINA</h3>
+                        <div class="product-features">
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> <strong>DELING SAFES</strong></li>
+                                <li><i class="fas fa-check-circle"></i> <strong>JINHAO SAFES</strong></li>
+                            </ul>
+                        </div>
+                        <a href="#" class="btn" id="imporChinaViewDetailsBtn">Lihat Detail Produk</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="contact fade-in">
+        <div class="container">
+            <div class="section-title">
+                <h2>Hubungi Kami</h2>
+                <p>Kami siap membantu Anda dengan solusi keamanan terbaik</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="info-card fade-in">
+                        <div class="info-icon-wrapper">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Lokasi</h3>
+                        <span class="contact-detail">Kantor Pusat</span>
+                        <p>Jl. Sirojul Munir No 120 - Jatiasih</p>
+                        <p>Bekasi - Jawa Barat 17425</p>
+                    </div>
+                    <div class="info-card fade-in">
+                        <div class="info-icon-wrapper">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h3>Telepon</h3>
+                        <span class="contact-detail"> Marketing </span>
+                        <p>+62 818 824 801</p>
+                        <p class="small-text">(A.B. Prasetyo)</p>
+                        <p>+021 2298 8787 </p>
+                        <p class="small-text">(PH)</p>
+                    </div>
+                    <div class="info-card fade-in">
+                        <div class="info-icon-wrapper">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <span class="contact-detail">Kirim Pesan</span>
+                        <p>ab.prasetyo@geosafes.co.id</p>
+                        <p>teguh@geosafes.co.id</p>
+                    </div>
+                    <div class="info-card fade-in">
+                        <div class="info-icon-wrapper">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Jam Operasional</h3>
+                        <span class="contact-detail">Waktu Layanan</span>
+                        <p>Senin - Sabtu</p>
+                        <p>07.00 - 15.00 WIB</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo-container" id="footerLogo">
+                        <img src="https://z-cdn-media.chatglm.cn/files/c8c66ba9-57c9-40e5-acdc-be83406dd594_CIVILS%20HELMET%20%284%29.png?auth_key=1789714824-c2c3d6778fbc4d46962a5635acd20590-0-e0d5ceae516476ebcfc0d9bda83f3f3e" alt="GEOSAFES Logo" class="footer-logo-icon">
+                        <div class="footer-logo-text">
+                            <div class="footer-logo-main">GEOSAFES</div>
+                            <div class="footer-logo-sub">INDONESIA OPTIMA</div>
+                        </div>
+                    </div>
+                    <p>Penyedia solusi brankas dan keamanan terpercaya di Indonesia dengan produk berkualitas dan layanan profesional.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Menu Cepat</h3>
+                    <ul>
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Beranda</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> Tentang Kami</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Layanan</a></li>
+                        <li><a href="#products"><i class="fas fa-chevron-right"></i> Produk</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Layanan</h3>
+                    <ul>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Pengiriman &amp; Instalasi</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Perawatan &amp; Perbaikan</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Kunci &amp; Digital Lock</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Konsultasi Keamanan</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Hubungi Kami</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-phone-alt"></i> +62 818 824 801</a></li>
+                        <li><a href="#"><i class="fas fa-envelope"></i> ab.prasetyo@adara.co.id</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> Jatiasih, Bekasi</a></li>
+                        <li><a href="#"><i class="fas fa-clock"></i> Senin-Sabtu: 07.00-15.00</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 GEOSAFES INDONESIA OPTIMA. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Loading Screen
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('loadingScreen').classList.add('hidden');
+            }, 500);
+        });
+        
+        // Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const closeMenu = document.getElementById('closeMenu');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const overlay = document.getElementById('overlay');
+        
+        hamburger.addEventListener('click', function() {
+            mobileMenu.classList.add('active');
+            overlay.classList.add('active');
+        });
+        
+        closeMenu.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+        
+        overlay.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+        
+        // Mobile Menu Navigation
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.remove('active');
+                overlay.classList.remove('active');
+                
+                // Update active state
+                mobileNavLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+        
+        // Desktop Menu Active State
+        const navLinks = document.querySelectorAll('nav ul li a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+        
+        // Logo Click to Scroll to Home
+        const logo = document.getElementById('logo');
+        const footerLogo = document.getElementById('footerLogo');
+        
+        function scrollToHome() {
+            const homeSection = document.getElementById('home');
+            window.scrollTo({
+                top: homeSection.offsetTop - 80,
+                behavior: 'smooth'
+            });
+            
+            // Update active state for navigation
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#home') {
+                    link.classList.add('active');
+                }
+            });
+            
+            mobileNavLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#home') {
+                    link.classList.add('active');
+                }
+            });
+        }
+        
+        logo.addEventListener('click', scrollToHome);
+        footerLogo.addEventListener('click', scrollToHome);
+        
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Active Menu on Scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const scrollPos = window.scrollY + 100;
+            
+            sections.forEach(section => {
+                const top = section.offsetTop;
+                const height = section.offsetHeight;
+                const id = section.getAttribute('id');
+                
+                if (scrollPos >= top && scrollPos < top + height) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === '#' + id) {
+                            link.classList.add('active');
+                        }
+                    });
+                    
+                    mobileNavLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === '#' + id) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        });
+        
+        // Scroll to Top Button
+        const scrollTopBtn = document.getElementById('scrollTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('active');
+            } else {
+                scrollTopBtn.classList.remove('active');
+            }
+        });
+        
+        scrollTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Fade In Animation on Scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        function checkFade() {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementBottom = element.getBoundingClientRect().bottom;
+                
+                if (elementTop < window.innerHeight && elementBottom > 0) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+        
+        // Check on load and scroll
+        window.addEventListener('load', checkFade);
+        window.addEventListener('scroll', checkFade);
+        
+        // Product Modal for SERI GEOSAFES
+        const productModal = document.getElementById('productModal');
+        const modalClose = document.getElementById('modalClose');
+        const modalContactBtn = document.getElementById('modalContactBtn');
+        const viewDetailsBtn = document.getElementById('viewDetailsBtn');
+        const productCard = document.getElementById('productCard');
+        
+        // Open modal when "Lihat Detail Produk" button is clicked
+        viewDetailsBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            productModal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+        });
+        
+        // Open modal when product card is clicked (except button)
+        productCard.addEventListener('click', function(e) {
+            // Don't open modal if the button was clicked
+            if (e.target.classList.contains('btn') || e.target.closest('.btn')) {
+                return;
+            }
+            
+            productModal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+        });
+        
+        // Close modal when close button is clicked
+        modalClose.addEventListener('click', function() {
+            productModal.classList.remove('active');
+            document.body.style.overflow = ''; // Re-enable scrolling
+        });
+        
+        // Hubungi Kami button in modal - close modal and scroll to contact section
+        modalContactBtn.addEventListener('click', function() {
+            productModal.classList.remove('active');
+            document.body.style.overflow = ''; // Re-enable scrolling
+            
+            // Scroll to contact section after a short delay
+            setTimeout(function() {
+                const contactSection = document.getElementById('contact');
+                window.scrollTo({
+                    top: contactSection.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+                
+                // Update active state for navigation
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#contact') {
+                        link.classList.add('active');
+                    }
+                });
+                
+                mobileNavLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#contact') {
+                        link.classList.add('active');
+                    }
+                });
+            }, 300);
+        });
+        
+        // Close modal when overlay is clicked
+        productModal.addEventListener('click', function(e) {
+            if (e.target === productModal) {
+                productModal.classList.remove('active');
+                document.body.style.overflow = ''; // Re-enable scrolling
+            }
+        });
+        
+        // Prevent modal from closing when clicking inside the modal
+        document.querySelector('#productModal .product-modal').addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+        
+        // Tab functionality for SERI GEOSAFES
+        const tabBtns = document.querySelectorAll('#productModal .tab-btn');
+        const tabContents = document.querySelectorAll('#productModal .tab-content');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active class from all buttons and contents
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                // Show corresponding content
+                const tabId = this.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // Product Modal for CUSTOMIZE
+        const customizeProductModal = document.getElementById('customizeProductModal');
+        const customizeModalClose = document.getElementById('customizeModalClose');
+        const customizeModalContactBtn = document.getElementById('customizeModalContactBtn');
+        const customizeViewDetailsBtn = document.getElementById('customizeViewDetailsBtn');
+        const customizeProductCard = document.getElementById('customizeProductCard');
+        
+        // Open modal when "Lihat Detail Produk" button is clicked
+        customizeViewDetailsBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            customizeProductModal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+        });
+        
+        // Open modal when product card is clicked (except button)
+        customizeProductCard.addEventListener('click', function(e) {
+            // Don't open modal if the button was clicked
+            if (e.target.classList.contains('btn') || e.target.closest('.btn')) {
+                return;
+            }
+            
+            customizeProductModal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+        });
+        
+        // Close modal when close button is clicked
+        customizeModalClose.addEventListener('click', function() {
+            customizeProductModal.classList.remove('active');
+            document.body.style.overflow = ''; // Re-enable scrolling
+        });
+        
+        // Hubungi Kami button in modal - close modal and scroll to contact section
+        customizeModalContactBtn.addEventListener('click', function() {
+            customizeProductModal.classList.remove('active');
+            document.body.style.overflow = ''; // Re-enable scrolling
+            
+            // Scroll to contact section after a short delay
+            setTimeout(function() {
+                const contactSection = document.getElementById('contact');
+                window.scrollTo({
+                    top: contactSection.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+                
+                // Update active state for navigation
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#contact') {
+                        link.classList.add('active');
+                    }
+                });
+                
+                mobileNavLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#contact') {
+                        link.classList.add('active');
+                    }
+                });
+            }, 300);
+        });
+        
+        // Close modal when overlay is clicked
+        customizeProductModal.addEventListener('click', function(e) {
+            if (e.target === customizeProductModal) {
+                customizeProductModal.classList.remove('active');
+                document.body.style.overflow = ''; // Re-enable scrolling
+            }
+        });
+        
+        // Prevent modal from closing when clicking inside the modal
+        document.querySelector('#customizeProductModal .product-modal').addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+        
+        // Tab functionality for CUSTOMIZE
+        const customizeTabBtns = document.querySelectorAll('#customizeProductModal .tab-btn');
+        const customizeTabContents = document.querySelectorAll('#customizeProductModal .tab-content');
+        
+        customizeTabBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active class from all buttons and contents
+                customizeTabBtns.forEach(b => b.classList.remove('active'));
+                customizeTabContents.forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                // Show corresponding content
+                const tabId = this.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // Product Modal for IMPOR CHINA
+        const imporChinaProductModal = document.getElementById('imporChinaProductModal');
+        const imporChinaModalClose = document.getElementById('imporChinaModalClose');
+        const imporChinaModalContactBtn = document.getElementById('imporChinaModalContactBtn');
+        const imporChinaViewDetailsBtn = document.getElementById('imporChinaViewDetailsBtn');
+        const imporChinaProductCard = document.getElementById('imporChinaProductCard');
+        
+        // Open modal when "Lihat Detail Produk" button is clicked
+        imporChinaViewDetailsBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            imporChinaProductModal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+        });
+        
+        // Open modal when product card is clicked (except button)
+        imporChinaProductCard.addEventListener('click', function(e) {
+            // Don't open modal if the button was clicked
+            if (e.target.classList.contains('btn') || e.target.closest('.btn')) {
+                return;
+            }
+            
+            imporChinaProductModal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+        });
+        
+        // Close modal when close button is clicked
+        imporChinaModalClose.addEventListener('click', function() {
+            imporChinaProductModal.classList.remove('active');
+            document.body.style.overflow = ''; // Re-enable scrolling
+        });
+        
+        // Hubungi Kami button in modal - close modal and scroll to contact section
+        imporChinaModalContactBtn.addEventListener('click', function() {
+            imporChinaProductModal.classList.remove('active');
+            document.body.style.overflow = ''; // Re-enable scrolling
+            
+            // Scroll to contact section after a short delay
+            setTimeout(function() {
+                const contactSection = document.getElementById('contact');
+                window.scrollTo({
+                    top: contactSection.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+                
+                // Update active state for navigation
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#contact') {
+                        link.classList.add('active');
+                    }
+                });
+                
+                mobileNavLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#contact') {
+                        link.classList.add('active');
+                    }
+                });
+            }, 300);
+        });
+        
+        // Close modal when overlay is clicked
+        imporChinaProductModal.addEventListener('click', function(e) {
+            if (e.target === imporChinaProductModal) {
+                imporChinaProductModal.classList.remove('active');
+                document.body.style.overflow = ''; // Re-enable scrolling
+            }
+        });
+        
+        // Prevent modal from closing when clicking inside the modal
+        document.querySelector('#imporChinaProductModal .product-modal').addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+        
+        // Tab functionality for IMPOR CHINA
+        const imporChinaTabBtns = document.querySelectorAll('#imporChinaProductModal .tab-btn');
+        const imporChinaTabContents = document.querySelectorAll('#imporChinaProductModal .tab-content');
+        
+        imporChinaTabBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active class from all buttons and contents
+                imporChinaTabBtns.forEach(b => b.classList.remove('active'));
+                imporChinaTabContents.forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                // Show corresponding content
+                const tabId = this.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // Image Slider Functionality
+        function initSlider(sliderId) {
+            const slider = document.getElementById(sliderId);
+            const container = slider.querySelector('.slider-container');
+            const slides = slider.querySelectorAll('.slide');
+            const prevBtn = slider.querySelector('.slider-btn:first-child');
+            const nextBtn = slider.querySelector('.slider-btn:last-child');
+            const indicators = slider.querySelectorAll('.indicator');
+            
+            let currentSlide = 0;
+            
+            function showSlide(index) {
+                container.style.transform = `translateX(-${index * 100}%)`;
+                
+                // Update indicators
+                indicators.forEach((indicator, i) => {
+                    if (i === index) {
+                        indicator.classList.add('active');
+                    } else {
+                        indicator.classList.remove('active');
+                    }
+                });
+                
+                currentSlide = index;
+            }
+            
+            // Next slide
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }
+            
+            // Previous slide
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                showSlide(currentSlide);
+            }
+            
+            // Event listeners
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+            
+            // Indicator clicks
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    showSlide(index);
+                });
+            });
+            
+            // Touch support for mobile
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            slider.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+            
+            slider.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+            
+            function handleSwipe() {
+                const swipeThreshold = 50;
+                const diff = touchStartX - touchEndX;
+                
+                if (Math.abs(diff) > swipeThreshold) {
+                    if (diff > 0) {
+                        // Swipe left
+                        nextSlide();
+                    } else {
+                        // Swipe right
+                        prevSlide();
+                    }
+                }
+            }
+        }
+        
+        // Initialize all sliders
+        document.addEventListener('DOMContentLoaded', function() {
+            // SERI GEOSAFES sliders
+            initSlider('titaniumSlider');
+            initSlider('platinumSlider');
+            initSlider('drawerSlider');
+            initSlider('fileSlider');
+            
+            // CUSTOMIZE sliders
+            initSlider('customizeFileSlider');
+            initSlider('customizeFloorSlider');
+            
+            // IMPOR CHINA sliders
+            initSlider('dellingSlider');
+            initSlider('jinhaoSlider');
+        });
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (productModal.classList.contains('active')) {
+                if (e.key === 'Escape') {
+                    productModal.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            }
+            
+            if (customizeProductModal.classList.contains('active')) {
+                if (e.key === 'Escape') {
+                    customizeProductModal.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            }
+            
+            if (imporChinaProductModal.classList.contains('active')) {
+                if (e.key === 'Escape') {
+                    imporChinaProductModal.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
